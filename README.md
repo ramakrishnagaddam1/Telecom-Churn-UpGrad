@@ -1,5 +1,5 @@
 # Telecom-Churn-UpGrad
--
+
 
 ###### Problem Statement
 
@@ -49,31 +49,3 @@ telecom.info(verbose=False)
 ### Exploratory Data Analysis
 
 #### Step1: Data Cleaning
-
-- First we will drop the columns that are not useful for our analysis like the columns that contains only one value
-
-# Fetching the columns that contains same date in entire column
-cols_no_unique = []
-
-for col in telecom.columns:
-    if telecom[col].nunique() == 1:
-        cols_no_unique.append(col)
-
-cols_no_unique
-
-- Dropping the above columns as it has only single value that may not be useful for our analysis
-
-# Dropping the columns
-telecom = telecom.drop(cols_no_unique, axis=1)
-
-### Treating Null Values
-
-We will Start by looking at the percentage of null records in each column
-
-# Percentage of null value analysis more than 0
-(telecom.isna().mean() * 100)[(telecom.isna().mean() * 100) != 0]
-
-telecom.info()
-
-categorical_data = telecom.select_dtypes(include=['object'])
-categorical_data.head()
