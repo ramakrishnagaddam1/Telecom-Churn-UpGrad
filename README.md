@@ -20,32 +20,6 @@ There are two main models of payment in the telecom industry
 
 #### Step1: Data Exploration and Preparation
 
-# Importing the required library
-
-import numpy as np
-import pandas as pd
-
-***Loading Data using pandas***
-
-# Reading the Telecom dataset
-telecom = pd.read_csv('./telecom_churn_data.csv')
-
-# Displaying the top few reords
-telecom.head()
-
-###### Basic Information
-
-- *Analysing the Dataset about the datatype, columns etc*
-
-telecom.shape
-
-telecom.info(verbose=False)
-
-***Observation:***
-
-- The dataset contains 99,999 rows and 226 columns
-- Out of 226 columns 179 float, 35 int and 12 object datatype
-
 ### Exploratory Data Analysis
 
 #### Step1: Data Cleaning
